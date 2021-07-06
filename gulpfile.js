@@ -34,7 +34,7 @@ gulp.task("css", function() {
 });
 
 gulp.task("html", function() {
-	return gulp.src("./src/pug/**/*.pug")
+	return gulp.src(["./src/pug/**/*.pug", "!./src/pug/**/\_*.pug"])
 		.pipe(pug({}))
 		.pipe(gulp.dest("./dist/html/"))
 });
